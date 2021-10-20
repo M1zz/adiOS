@@ -22,7 +22,7 @@ struct Goods: View {
                 Text("Badges")
                     .font(.system(size: 40))
                     .fontWeight(.bold)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color(UIColor.label))
                 
                 Spacer(minLength: 0)
                 
@@ -76,7 +76,8 @@ struct Goods: View {
             }
             .padding()
             .padding(.top,UIApplication.shared.windows.first?.safeAreaInsets.top)
-            .background(Color.white.shadow(color: Color.black.opacity(0.18), radius: 5, x: 0, y: 5))
+            .background(Color(UIColor.systemBackground)
+                            .shadow(color: Color(UIColor.label).opacity(0.18), radius: 5, x: 0, y: 5))
             .zIndex(0)
             
             ScrollView {
